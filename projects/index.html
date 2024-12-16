@@ -119,6 +119,50 @@
   <div class="row">
     <div class="col-lg-12">
 
+
+		<div class="media stream-item">
+			<div class="media-body">
+				<h3 class="article-title mb-0 mt-0" itemprop="name">COVID-19 lung lesion segmentation</h3>
+				<div class="stream-meta article-metadata"> <span></span></div>        
+				<div class="article-style" itemprop="articleBody" align="justify">This work addresses the challenge of semantic segmentation for COVID-19 CT lung lesions using three different models: U-Net, TransUNet, and Swin-Unet. These models were selected for their representation of pure CNNs, a combination of CNNs and Transformers, and pure Transformer architectures, respectively. The results show that all three models achieved an Intersection over Union (IoU) greater than 70% and a Dice coefficient exceeding 80%. Among them, TransUNet delivered the best performance, but with over 105M parameters. In contrast, U-Net, a simpler architecture, achieved similar results with significantly fewer parameters (30M), demonstrating that CNN-based architectures remain competitive with Transformers for semantic segmentation tasks.</div>
+<div class="btn-links">
+					<!--<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://drive.google.com/file/d/1Df3PLqa_sDS59bhNQuzrxSSQ0tgcCnIs/view" target="_blank" rel="noopener">Report</a>-->
+				</div>
+			</div>
+			<div class="ml-3"><a target="_blank" href="../imgs/projects/covid_segmentation.png"><img class="custom-img-size-300"  src="../imgs/projects/covid_segmentation.png" itemprop="image" class="center"></a></div>
+		</div>
+
+		<div class="media stream-item">
+			<div class="media-body">
+				<h3 class="article-title mb-0 mt-0" itemprop="name">Task-specific knowledge distillation of BERT</h3>
+				<div class="stream-meta article-metadata"> <span></span></div>        
+				<div class="article-style" itemprop="articleBody" align="justify">This project focused on task-specific knowledge distillation of BERT to smaller models, such as BiLSTM, 1D-CNNs, and small BERT (with fewer layers), for the classification of COVID-19 related tweets. The BERT-base model was first fine-tuned on the dataset, and then distilled to smaller models using soft-labels with KL-divergence of the predictions or MSE loss on the logits. The best performing model retained 94% of BERT's performance while reducing the number of parameters by 97%. Worked with PyTorch and Hugging face</div>
+			</div>
+			<div class="ml-3"><a target="_blank" href="../imgs/projects/distillation.png"><img class="custom-img-size-300"  src="../imgs/projects/distillation.png" itemprop="image" class="center"></a></div>
+		</div>
+
+		<!--
+		<div class="media stream-item">
+			<div class="media-body">
+				<h3 class="article-title mb-0 mt-0" itemprop="name">Face Recognition using Siamese Networks</h3>
+				<div class="stream-meta article-metadata"> <span></span></div>        
+				<div class="article-style" itemprop="articleBody" align="justify"> This work addresses the challenge of face recognition using Siamese neural networks and metric learning loss functions, such as contrastive loss and triplet loss. The baseline approach utilizes a custom CNN for feature extraction. To enhance performance, transfer learning is incorporated from VGG and ResNet networks, and the model is evaluated on the Labeled Faces in the Wild (LFW) dataset. Experimental results demonstrate that the proposed model outperforms the baseline, highlighting the effectiveness of transfer learning in improving face verification systems. Worked with PyTorch and Tensorflow</div>
+			</div>
+			<div class="ml-3"><a target="_blank" href="https://cs330.stanford.edu/"><img class="custom-img-size-300"  src="../imgs/projects/cs330.png" itemprop="image" class="center"></a></div>
+		</div>
+
+		<!--
+		<div class="media stream-item">
+			<div class="media-body">
+				<h3 class="article-title mb-0 mt-0" itemprop="name">Machine Translation using Transformers</h3>
+				<div class="stream-meta article-metadata"> <span></span></div>        
+				<div class="article-style" itemprop="articleBody" align="justify"> In this work, I implemented the Transformer architecture
+of the paper <a href="https://arxiv.org/abs/1706.03762" target="_blank">"Attention is All you Need"</a> from scratch. It includes sinusoidal positional encoding, (masked) multi-head attention, encoder and decoder layers. I applied this model to the Spanish-to-Portuguese and Detch-to-English translation tasks. Worked with PyTorch.</div>
+			</div>
+			<div class="ml-3"><a target="_blank" href="https://cs330.stanford.edu/"><img class="custom-img-size-300"  src="../imgs/projects/cs330.png" itemprop="image" class="center"></a></div>
+		</div>
+
+<!--
 		<div class="media stream-item">
 			<div class="media-body">
 				<h3 class="article-title mb-0 mt-0" itemprop="name">Few-Shot Image Classification</h3>
@@ -127,7 +171,7 @@
 			</div>
 			<div class="ml-3"><a target="_blank" href="https://cs330.stanford.edu/"><img class="custom-img-size-300"  src="../imgs/projects/cs330.png" itemprop="image" class="center"></a></div>
 		</div>
-
+-->
 
 		<div class="media stream-item">
 			<div class="media-body">
@@ -159,7 +203,8 @@
 			<div class="media-body">
 				<h3 class="article-title mb-0 mt-0" itemprop="name">Trademark Image Retrieval using Deep Feature Maps</h3>
 				<div class="stream-meta article-metadata"> <span></span></div>        
-				<div class="article-style" itemprop="articleBody" align="justify">In this work, I present a study of transfer learning applied to trademark image retrieval. Initially selective search is used to obtain region proposals, the image regions obtained are forwarded through a pretrained CNN architecture (AlexNet, GoogleNet and ResNet) on the ImageNet dataset. Feature representations are improved by developing feature aggregation methods (avg-pool, max-pool, R-MAC, etc) over intermediate layers. Finally re-ranking based on graph query specific fusion algorithm was applied to improve the results. Experiments demostrate that intermediate layers produce better results for image retrieval. It was possible to increase in ~15% the baseline (transfer learning of last layers) mean average precision (mAP). Worked with python and Caffe. </div>
+				<div class="article-style" itemprop="articleBody" align="justify">This work presents a study of transfer learning applied to trademark image retrieval. Initially, selective search is used to obtain region proposals, which are then passed through pretrained CNN architectures (AlexNet, GoogleNet, and ResNet) trained on the ImageNet dataset. Feature representations are enhanced through the development of feature aggregation methods, such as average pooling, max pooling, and R-MAC, applied over intermediate layers. A re-ranking process based on a graph query-specific fusion algorithm is then used to further improve retrieval results. Experimental results demonstrate that using intermediate layers yields better performance for image retrieval, achieving approximately a 15% increase in mean average precision (mAP) compared to the baseline, which relied on transfer learning from the final layers. Worked with python and Caffe.
+ </div>
 				<div class="btn-links">
 					<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://drive.google.com/file/d/1Enejm5cIVM-OAlBX4mleAQAPkaSVIOYg/view" target="_blank" rel="noopener">Slides</a>
 				</div>
